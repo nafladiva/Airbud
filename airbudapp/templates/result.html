@@ -36,15 +36,17 @@
             </div>
         </div>
 
-        <div class="col-12 m-2 card">
-            <div class="card-body">
-                <div class="alert alert-success" role="alert">
-                    Udara disekitar Anda berkualitas baik
+        <div class="row d-flex justify-content-center">
+            <div class="col-12 m-2 card">
+                <div class="card-body">
+                    <div class="alert alert-success" role="alert">
+                        Udara disekitar Anda berkualitas baik
+                    </div>
+                    <h4>Saran Tindakan</h4>
+                    <p><strong>{{data.city.name}}</strong></p>
+                    
+                    <a class="btn btn-primary" href="{% url 'saran' %}">Beri saran untuk pemerintahan</a>
                 </div>
-                <h4>Saran Tindakan</h4>
-                <p><strong>{{data.city.name}}</strong></p>
-                
-                <a class="btn btn-primary" href="#">Beri saran untuk pemerintahan</a>
             </div>
         </div>
     </div>

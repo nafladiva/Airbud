@@ -14,47 +14,44 @@
             <form action="{% url 'search' %}" method="POST">
                 {% csrf_token %}
                 <div class="form-group">
-                  <input type="text" name="city" class="mt-4 p-3 form-control" placeholder="Nama daerah" required>
+                  <input type="text" name="city" class="mt-4 p-3 input-box" placeholder="Nama daerah" required>
         
-                  <input type="submit" class="m-2 btn btn-primary" value="Cari" name="search">
+                  <input type="submit" class="m-2 p-3 btn btn-cari" value="Cari" name="search">
                 </div>
             </form>
         </div>
     </div>
+</div>
 
-    <!-- <div class="form-group">
-        <label for="exampleFormControlSelect1">State</label>
-        <select class="form-control" id="exampleFormControlSelect1">
-            <optgroup label="Sumatera">
-                <option>Aceh</option>
-                <option>Sumatera Utara</option>
-                <option>Sumatera Barat</option>
-                <option>Sumatera Selatan</option>
-                <option>Riau</option>
-                <option>Bengkulu</option>
-                <option>Lampung</option>
-            </optgroup>
-            
-            <optgroup label="Jawa">
-                <option>Jakarta</option>
-                <option>Banten</option>
-                <option>Yogyakarta</option>
-                <option>Jawa Barat</option>
-                <option>Jawa Tengah</option>
-                <option>Jawa Timur</option>
-                <option>Bali</option>
-            </optgroup>
+<div class="container text-center tutorial-sec">
+    <h3 class="mt-5 mb-5">Apa itu <strong>Airbud</strong>?</h3>
+    <div class="row d-flex justify-content-center">
+        <div class="col-11 col-md-8">
+            <p class="mb-5">Airbud adalah website yang menginformasikan kualitas udara di suatu kota tertentu. Dengan Airbud, kamu juga bisa memberikan solusi atau saran kepada pemerintah terkait peningkatan kualitas udara yang ada di Indonesia loh!</p>
+        </div>
+    </div>
 
-            <optgroup label="Kalimantan">
-                <option>Kalimatan Barat</option>
-                <option>Kalimatan Timur</option>
-                <option>Kalimatan Tengah</option>
-                <option>Kalimatan Utara</option>
-                <option>Kalimatan Selatan</option>
-            </optgroup>
-        </select>
-    </div> -->
+    <h3 class="mt-5 mb-4">Cara menggunakan <strong>Airbud</strong></h3>
+    <div class="row d-flex justify-content-center">
+        <div class="m-3 col-12 col-md-2">
+            <img class="tutorial-img" src="{% static 'images/1.png' %}" alt="1">
+            <p>Bukalah website <strong>Airbud</strong></p>
+        </div>
 
-    <!-- <a href="{% url 'result' %}" class="btn btn-primary">START</a> -->
+        <div class="m-3 col-12 col-md-2">
+            <img class="tutorial-img" src="{% static 'images/2.png' %}" alt="2">
+            <p>Cari kota yang ingin kamu cek kualitas udaranya</p>
+        </div>
+
+        <div class="m-3 col-12 col-md-2">
+            <img class="tutorial-img" src="{% static 'images/3.png' %}" alt="3">
+            <p>Beri saran kepada pemerintah terkait peningkatan kualitas udara</p>
+        </div>
+
+        <div class="m-3 col-12 col-md-2">
+            <img class="tutorial-img" src="{% static 'images/4.png' %}" alt="4">
+            <p>Selesai!</p>
+        </div>
+    </div>
 </div>
 {% endblock %}

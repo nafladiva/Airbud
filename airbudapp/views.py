@@ -31,3 +31,6 @@ def search(request):
         return render(request, 'result.html', context)
 
     return redirect('/')
+
+def opinion(request):
+    return render(request, 'saran.html')
