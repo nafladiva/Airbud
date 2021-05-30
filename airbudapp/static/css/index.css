@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.herosection {
+    background-image: url('/static/images/background.png');
+    background-size: cover;
+    padding: 12%;
+}
+
+.hero-title {
+    padding-bottom: 1%;
+}
+
+.hero-subtitle {
+    color: white;
+    font-size: 24px;
+}
+
+.logo {
+    width: 8%;
+    height: auto;
+    margin-right: 3%;
+}
+
+.brand-logo {
+    font-size: 6vw;
+    color: white;
+}
+
+.input-box {
+    border-radius: 50px;
+}
+
+.aq-card {
+    background-color: rgb(53, 53, 190);
+}

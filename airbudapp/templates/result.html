@@ -1,15 +1,58 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 <div class="container text-center">
     {% if status %}
+    <p class="mt-5">Hasil pencarian</p>
     <h3>Kota {{data.city.name}}</h3>
-    <h4>Air quality : <strong>{{data.aqi}}</strong></h4>
-    <h5>Dominan : {{data.dominentpol}}</h5>
+
+    <div class="mt-4 container">
+        <div class="row d-flex justify-content-center text-left">
+            <div class="col-12 col-md-3 m-2 card" style="background-color: rgb(159, 236, 236);">
+                <div class="card-body">
+                    Air Quality
+                    <p><strong>{{data.city.name}}</strong></p>
+                    <h1 class="text-center"><strong>{{data.aqi}}</strong></h1>
+                    <h5 class="text-center">ppm</h5>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-3 m-2 card">
+                <div class="card-body">
+                    Dew point
+                    <p><strong>{{data.city.name}}</strong></p>
+                    <h1 class="text-center"><strong>{{data.iaqi.dew.v}}</strong></h1>
+                    <h5 class="text-center">RH</h5>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-3 m-2 card">
+                <div class="card-body">
+                    Dominan
+                    <p><strong>{{data.city.name}}</strong></p>
+                    <h1 class="text-center"><strong>{{data.dominentpol}}</strong></h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 m-2 card">
+            <div class="card-body">
+                <div class="alert alert-success" role="alert">
+                    Udara disekitar Anda berkualitas baik
+                </div>
+                <h4>Saran Tindakan</h4>
+                <p><strong>{{data.city.name}}</strong></p>
+                
+                <a class="btn btn-primary" href="#">Beri saran untuk pemerintahan</a>
+            </div>
+        </div>
+    </div>
+
     {% else %}
-    <h3>No Result</h3>
+    <h3 class="m-3">Data tidak ditemukan!</h3>
     {% endif %}
     
-    <a class="btn btn-secondary" href="/">Cari lain</a>
+    <a class="m-5 btn btn-secondary" href="/">Cari daerah lain</a>
 </div>
 {% endblock %}
