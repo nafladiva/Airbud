@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container text-center">
+    {% if status %}
+    <h3>Kota {{data.city.name}}</h3>
+    <h4>Air quality : <strong>{{data.aqi}}</strong></h4>
+    <h5>Dominan : {{data.dominentpol}}</h5>
+    {% else %}
+    <h3>No Result</h3>
+    {% endif %}
+    
+    <a class="btn btn-secondary" href="/">Cari lain</a>
+</div>
+{% endblock %}

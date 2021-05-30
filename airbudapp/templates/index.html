@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container text-center">
+    <h1>AirBud</h1>
+    <p>Deteksi kondisi udara disekitarmu</p>
+
+    <form action="{% url 'search' %}" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Nama daerah</label>
+          <input type="text" name="city" class="form-control" id="exampleFormControlInput1" required>
+
+          <input type="submit" class="m-2 btn btn-primary" value="Cari" name="search">
+        </div>
+    </form>
+
+    <!-- <div class="form-group">
+        <label for="exampleFormControlSelect1">State</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+            <optgroup label="Sumatera">
+                <option>Aceh</option>
+                <option>Sumatera Utara</option>
+                <option>Sumatera Barat</option>
+                <option>Sumatera Selatan</option>
+                <option>Riau</option>
+                <option>Bengkulu</option>
+                <option>Lampung</option>
+            </optgroup>
+            
+            <optgroup label="Jawa">
+                <option>Jakarta</option>
+                <option>Banten</option>
+                <option>Yogyakarta</option>
+                <option>Jawa Barat</option>
+                <option>Jawa Tengah</option>
+                <option>Jawa Timur</option>
+                <option>Bali</option>
+            </optgroup>
+
+            <optgroup label="Kalimantan">
+                <option>Kalimatan Barat</option>
+                <option>Kalimatan Timur</option>
+                <option>Kalimatan Tengah</option>
+                <option>Kalimatan Utara</option>
+                <option>Kalimatan Selatan</option>
+            </optgroup>
+        </select>
+    </div> -->
+
+    <!-- <a href="{% url 'result' %}" class="btn btn-primary">START</a> -->
+</div>
+{% endblock %}
