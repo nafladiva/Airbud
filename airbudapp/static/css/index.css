@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: rgb(241, 241, 241);
+    background-color: rgb(230, 230, 230) !important;
 }
 
 .herosection {
@@ -33,22 +33,25 @@ body {
 
 .input-box {
     border: 1px solid rgb(190, 190, 190);
-    border-radius: 5px;
+    border-radius: 10px;
     width: 85%;
+    border: none;
 }
 
 .btn-cari {
     background-color: rgb(16, 35, 85);
     color: white;
+    border-radius: 8px !important;
 }
 
-.aq-card {
-    background-color: rgb(53, 53, 190);
+#AQcard {
+    color: white;
 }
 
 .tutorial-sec {
     background-color: white;
     margin-top: -8%;
+    margin-bottom: 8%;
     border-radius: 25px;
     padding: 4vh;
     box-shadow: 5px 5px 40px 10px rgba(0, 0, 0, 0.26);

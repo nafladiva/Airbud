@@ -9,11 +9,11 @@
 
     <div class="mt-4 container">
         <div class="row d-flex justify-content-center text-left">
-            <div class="col-12 col-md-3 m-2 card" style="background-color: rgb(159, 236, 236);">
+            <div class="col-12 col-md-3 m-2 card" id="AQcard">
                 <div class="card-body">
                     Air Quality
                     <p><strong>{{data.city.name}}</strong></p>
-                    <h1 class="text-center"><strong>{{data.aqi}}</strong></h1>
+                    <h1 class="text-center" id="aqi"><strong>{{data.aqi}}</strong></h1>
                     <h5 class="text-center">ppm</h5>
                 </div>
             </div>
@@ -39,8 +39,7 @@
         <div class="row d-flex justify-content-center">
             <div class="col-12 m-2 card">
                 <div class="card-body">
-                    <div class="alert alert-success" role="alert">
-                        Udara disekitar Anda berkualitas baik
+                    <div class="alert" role="alert" id="alert-info">
                     </div>
                     <h4>Saran Tindakan</h4>
                     <p><strong>{{data.city.name}}</strong></p>
@@ -57,4 +56,45 @@
     
     <a class="m-5 btn btn-secondary" href="/">Cari daerah lain</a>
 </div>
+{% endblock %}
+
+{% block script %}
+<script>
+    const cekLevel = (level) => {
+        color = ''
+
+        if(level <= 50) {
+            color = 'green'
+            $('#alert-info').addClass('alert-success');
+            $('#alert-info').html('Udara disekitar Anda berkualitas <strong>baik</strong>')
+        } else if(level > 50 && level <= 100) {
+            color = 'yellow'
+            document.getElementById('AQcard').style.color = 'black'
+            $('#alert-info').addClass('alert-secondary');
+            $('#alert-info').html('Udara disekitar Anda berkualitas <strong>sedang</strong>')
+        } else if(level > 100 && level <= 150) {
+            color = 'orange'
+            $('#alert-info').addClass('alert-warning');
+            $('#alert-info').html('Udara disekitar Anda <strong>tidak sehat</strong>')
+        } else if(level > 150 && level <= 200) {
+            color = 'red'
+            $('#alert-info').addClass('alert-warning');
+            $('#alert-info').html('Udara disekitar Anda <strong>tidak sehat</strong>')
+        } else if(level > 200 && level <= 300) {
+            color = 'purple'
+            $('#alert-info').addClass('alert-danger');
+            $('#alert-info').html('Udara disekitar Anda <strong>sangat tidak sehat</strong>')
+        } else {
+            color = 'maroon'
+            $('#alert-info').addClass('alert-danger');
+            $('#alert-info').html('Udara disekitar Anda <strong>berbahaya!</strong>')
+        }
+
+        return color
+    }
+
+    let aqi = document.getElementById('aqi').innerText
+    console.log(aqi)
+    document.getElementById('AQcard').style.backgroundColor = cekLevel(aqi)
+</script>
 {% endblock %}
