@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif !important;
     background-color: rgb(230, 230, 230) !important;
 }
 
@@ -42,6 +42,11 @@ body {
     background-color: rgb(16, 35, 85);
     color: white;
     border-radius: 8px !important;
+}
+
+.card {
+    border-radius: 12px !important;
+    box-shadow: 7px 10px 10px rgba(0, 0, 0, 0.055);
 }
 
 #AQcard {

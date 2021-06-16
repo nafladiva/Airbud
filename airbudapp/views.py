@@ -3,18 +3,7 @@ import requests
 
 def index(request):
     return render(request, 'index.html')
-
-def get_data(request):
-    response = requests.get('http://api.airvisual.com/v2/nearest_city?key=a2c15523-7560-46f0-a1fc-1b8ef1f968e0')
-    data = response.json()
-    return render(request, 'result.html', {
-        'city': data['data']['city'],
-        'state': data['data']['state']
-    })
-
-# def result(request):
-#     return render(request, 'result.html')
-
+    
 def search(request):
     if request.method == 'POST':
         keyword = request.POST.get('city')

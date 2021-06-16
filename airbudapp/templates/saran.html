@@ -3,25 +3,25 @@
 
 {% block content %}
 <div class="container">
-    <h1 class="mt-5 mb-4">Saran Anda</h1>
+  <h1 class="mt-5 mb-4" style="font-family: 'Poppins', sans-serif">Saran Anda</h1>
 
-    <form action="/">
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Nama Anda</label>
+  <form action="/">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label"style="font-family: 'Poppins', sans-serif">Nama Anda</label>
+        <input type="email" class="form-control">
+      </div>
+
+      <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label" style="font-family: 'Poppins', sans-serif">Asal kota</label>
           <input type="email" class="form-control">
-        </div>
+      </div>
 
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Asal kota</label>
-            <input type="email" class="form-control">
-        </div>
+      <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"style="font-family: 'Poppins', sans-serif">Saran</label><br>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
 
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Saran</label><br>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+      <button type="submit" class="btn btn-primary"style="font-family: 'Poppins', sans-serif">Submit</button>
+    </form>
 </div>
 {% endblock %}

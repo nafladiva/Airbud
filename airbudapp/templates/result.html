@@ -11,7 +11,7 @@
         <div class="row d-flex justify-content-center text-left">
             <div class="col-12 col-md-3 m-2 card" id="AQcard">
                 <div class="card-body">
-                    Air Quality
+                    Kualitas Udara
                     <p><strong>{{data.city.name}}</strong></p>
                     <h1 class="text-center" id="aqi"><strong>{{data.aqi}}</strong></h1>
                     <h5 class="text-center">ppm</h5>
@@ -20,7 +20,10 @@
 
             <div class="col-12 col-md-3 m-2 card">
                 <div class="card-body">
-                    Dew point
+                    Dew point   
+                    <a class="ml-1" data-toggle="tooltip" data-placement="bottom" title="Dew point adalah suatu titik suhu dimana akan mengakibatkan &#013;terjadinya pengembunan pada kelembaban tertentu.">
+                        <i class="fas fa-info-circle"></i>
+                    </a>
                     <p><strong>{{data.city.name}}</strong></p>
                     <h1 class="text-center"><strong>{{data.iaqi.dew.v}}</strong></h1>
                     <h5 class="text-center">RH</h5>
@@ -37,9 +40,14 @@
         </div>
 
         <div class="row d-flex justify-content-center">
-            <div class="col-12 m-2 card">
+            <div class="col-12 col-md-4 m-2 card">
                 <div class="card-body">
-                    <div class="alert" role="alert" id="alert-info">
+                    <img src="{% static 'images/aq.jpg' %}" alt="Index" style="width: 100%;">
+                </div>
+            </div>
+            <div class="col-12 col-md-6 m-2 card">
+                <div class="card-body">
+                    <div class="alert mb-4" role="alert" id="alert-info">
                     </div>
                     <h4>Saran Tindakan</h4>
                     <p><strong>{{data.city.name}}</strong></p>
@@ -54,7 +62,7 @@
     <h3 class="m-3">Data tidak ditemukan!</h3>
     {% endif %}
     
-    <a class="m-5 btn btn-secondary" href="/">Cari daerah lain</a>
+    <a class="m-5 btn btn-secondary" href="/"><i class="fas fa-search"></i> Cari kota lain</a>
 </div>
 {% endblock %}
 
